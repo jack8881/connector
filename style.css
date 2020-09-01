@@ -66,7 +66,7 @@ body{
   height: 174px;
   width: auto;
   z-index: 5;
-  transition: all 0.5s cubic-bezier(0.5,0.15,0.33,1);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
 }
 #cable-right {
   position: absolute;
@@ -80,10 +80,10 @@ body{
   height: 168px;
   width: auto;
   z-index: 5;
-  -webkit-transition: all 0.5s cubic-bezier(0.5,0.15,0.33,1);
-  -moz-transition: all 0.5s cubic-bezier(0.5,0.15,0.33,1);
-  -o-transition: all 0.5s cubic-bezier(0.5,0.15,0.33,1);
-  transition: all 0.5s cubic-bezier(0.5,0.15,0.33,1);
+  -webkit-transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  -moz-transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  -o-transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
 }
 #led-stripe-60s {
     top: 153px;
@@ -104,10 +104,10 @@ body{
     -moz-transition: all 0.2s cubic-bezier(0.5,0.15,0.33,1);
     -o-transition: all 0.2s cubic-bezier(0.5,0.15,0.33,1);
     transition: all 0.2s cubic-bezier(0.5,0.15,0.33,1);
-    -moz-transition-delay: 0.5s;
-    -o-transition-delay: 0.5s;
-    -webkit-transition-delay: 0.5s;
-    transition-delay: 0.5s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }
 .led-light {
     position: absolute;
@@ -169,4 +169,31 @@ body{
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
   filter: alpha(opacity=70);
   }
+}
+
+.toggle {
+  isolation: isolate;
+  position: relative;
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #727278;
+}
+
+.toggle-state {
+  display: none;
+}
+
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: #ecf0f3;
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+
+.toggle-state:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
 }

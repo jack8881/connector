@@ -179,6 +179,7 @@ body{
   height: 30px;
   width: 60px;
   border-radius: 15px;
+  border: 2px solid white;
   overflow: hidden;
   background-color: #0e0e0e;
 }

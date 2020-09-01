@@ -175,11 +175,12 @@ body{
   isolation: isolate;
   position: relative;
   margin-left: -40px;
+  padding: 2px;
   height: 30px;
   width: 60px;
   border-radius: 15px;
   overflow: hidden;
-  background-color: #727278;
+  background-color: #0e0e0e;
 }
 
 .toggle-state {
@@ -191,10 +192,9 @@ body{
   width: 200%;
   background: #ecf0f3;
   border-radius: 15px;
-  transform: translate3d(-75%, 0, 0);
   transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
 }
 
 .toggle-state:checked ~ .indicator {
-  transform: translate3d(25%, 0, 0);
+  transform: translate3d(100%, 0, 0);
 }
